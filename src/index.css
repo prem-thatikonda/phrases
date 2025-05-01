@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pretty: handwiting-1;
+  --font-cursive: handwriting-2;
+  --font-brownist: handwriting-3;
+
+  --font-magazine: magazine;
+
+  --font-gothic: gothic-1;
+  --font-gothic-2: gothic-2;
+
+  --animate-sway: sway 2s ease-in-out infinite;
+}
+
+@layer base {
+  @font-face {
+    font-family: "handwiting-1";
+    src: url("/fonts/prettysingle.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "handwriting-2";
+    src: url("/fonts/loverine.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "handwriting-3";
+    src: url("/fonts/Brownist.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "magazine";
+    src: url("/fonts/Magazine.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "gothic-1";
+    src: url("/fonts/MorrisRomanBlack.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "gothic-2";
+    src: url("/fonts/Fairies.otf") format("opentype");
+  }
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .bg-middle {
+    @apply bg-cover bg-center bg-no-repeat;
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+}
